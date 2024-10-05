@@ -5,7 +5,7 @@ import cors from 'cors'
 import morgan from "morgan";
 
 import authRoutes from './routes/authRoutes.js'
-// import blogRoutes from './routes/blogRoutes.js'
+import ticketRoutes from './routes/ticketRoutes.js'
 // import userRoutes from './routes/userRoutes.js'
 
 
@@ -29,7 +29,7 @@ db();
 
 // path ,routes
 app.use('/api/v1',authRoutes)
-// app.use('/api/v1/blog',blogRoutes);
+app.use('/api/v1/ticket',ticketRoutes);
 
 
 

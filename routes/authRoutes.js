@@ -9,4 +9,6 @@ router.post('/register',registerController)
 // Login user
 router.post('/login',loginController)
 
+
+
 export default router

@@ -6,7 +6,7 @@ import userModel from "../model/userModel.js"
 export const registerController=async(req,res)=>{
   
     try {
-        const {name,email,pic,password,isAdmin}=req.body
+        const {name,email,password,isAdmin}=req.body
         console.log(req.body)
        
     if(!name){
@@ -32,7 +32,7 @@ export const registerController=async(req,res)=>{
 
 //    save data
       
-    const user= await new userModel({name,email,password:hashedPassword,pic,isAdmin}).save();
+    const user= await new userModel({name,email,password:hashedPassword,isAdmin}).save();
     res.status(201).send({
         success:true,
         message:"User Created",
